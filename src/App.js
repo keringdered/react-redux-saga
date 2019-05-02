@@ -7,21 +7,21 @@ import {
 import Home from "./components/Home";
 import Stuff from "./components/Stuff";
 import Contact from "./components/Contact";
+import Routes from "./routes";
+import BlogContainer from "./containers/BlogContainer";
+import CategoryContainer from "./containers/CategoryContainer";
 function App() {
   return (
     <HashRouter>
         <div className="container">
-          <h1>{process.env.REACT_APP_NAME} SPA</h1>
-          <ul className="header">
-            <li><NavLink to="/" >Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
+          <Routes/>
           <div className="content">
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/stuff" component={Stuff}/>
               <Route path="/contact" component={Contact}/>
+              <Route path="/news" component={BlogContainer}/>
+              <Route path="/all-categories" component={CategoryContainer}/>
             </Switch>
           </div>
         </div>
