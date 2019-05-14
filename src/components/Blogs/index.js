@@ -12,4 +12,7 @@ class Blogs extends React.Component{
         );
     }
 }
+const mapStateToProps=({})=>{
+
+};
 export default Blogs;
