@@ -10,12 +10,21 @@ class Blogs extends React.Component{
     }
 
     render() {
+        const list =
+            Object.values(this.props.blogCategoriesByID).map((category,index)=>{
+                return(
+                    <li key={category.id}>{category.name}</li>
+                )
+
+            });
         return(
             <div className="container">
-                <h2>Blogs Blogs Blogs Blogs</h2>
-                <p>The easiest thing to do is post on
-                    our <a href="http://forum.kirupa.com">forums</a>.
-                </p>
+
+                <ol>
+                    {
+                        list
+                    }
+                </ol>
             </div>
         );
     }

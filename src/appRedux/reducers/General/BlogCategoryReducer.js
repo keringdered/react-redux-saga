@@ -1,7 +1,10 @@
 import {
     EDIT_BLOG_CATEGORIES_SUCCESS,
     ADD_BLOG_CATEGORIES_SUCCESS,
-    FETCH_BLOG_CATEGORIES_SUCCESS
+    FETCH_BLOG_CATEGORIES_SUCCESS,
+    SHOW_CREATE_BLOG_CATEGORIES_FORM,
+    HIDE_CREATE_BLOG_CATEGORIES_FORM,
+    SHOW_EDIT_BLOG_CATEGORIES_FORM, HIDE_EDIT_BLOG_CATEGORIES_FORM
 } from "../../actions/General/BlogCategoryActions";
 
 const INIT_STATE={
@@ -26,6 +29,26 @@ const  BlogCategoriesReducer =(state=INIT_STATE,action)=>{
             return {
                 ...state,
                 blogCategoriesByID:categories
+            };
+        case SHOW_CREATE_BLOG_CATEGORIES_FORM:
+            return {
+                ...state,
+                showBlogCategoryCreateForm:true
+            };
+        case HIDE_CREATE_BLOG_CATEGORIES_FORM:
+            return {
+                ...state,
+                showBlogCategoryCreateForm:false
+            };
+        case SHOW_EDIT_BLOG_CATEGORIES_FORM:
+            return {
+                ...state,
+                showBlogCategoryEditForm:true
+            };
+        case HIDE_EDIT_BLOG_CATEGORIES_FORM:
+            return {
+                ...state,
+                showBlogCategoryCreateForm:false
             };
 
         default:

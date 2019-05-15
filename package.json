@@ -11,6 +11,7 @@
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-bootstrap-table-next": "^3.1.2",
     "react-bootstrap-table2-filter": "^1.1.9",
     "react-bootstrap-table2-paginator": "^2.0.6",
