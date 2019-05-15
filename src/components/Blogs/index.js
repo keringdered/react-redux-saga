@@ -1,6 +1,14 @@
 import React from 'react';
-
+import {connect} from "react-redux";
+import {fetchBlogCategoryGenerator} from "../../appRedux/actions/General/BlogCategoryActions";
 class Blogs extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    componentDidMount() {
+        this.props.fetchBlogCategoryGenerator();
+    }
+
     render() {
         return(
             <div className="container">
@@ -12,7 +20,8 @@ class Blogs extends React.Component{
         );
     }
 }
-const mapStateToProps=({})=>{
-
+const mapStateToProps=({blogCategory})=>{
+    const {blogCategoriesByID}  = blogCategory; 
+    return {blogCategoriesByID}
 };
-export default Blogs;
+export default connect(mapStateToProps,{fetchBlogCategoryGenerator})(Blogs);

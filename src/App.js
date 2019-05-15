@@ -3,9 +3,7 @@ import { ConnectedRouter } from "connected-react-router";
 import { Provider } from "react-redux";
 
 import {
-  Route,
-  NavLink,
-  HashRouter,Switch
+  Route,Switch
 } from "react-router-dom";
 import Home from "./components/Home";
 import Stuff from "./components/Stuff";

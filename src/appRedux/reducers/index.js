@@ -1,6 +1,8 @@
 import {combineReducers} from "redux";
 import {connectRouter} from 'connected-react-router'
-const defaultReducers ={
+import BlogCategoriesReducer from "./General/BlogCategoryReducer";
 
+const defaultReducers ={
+    blogCategory:BlogCategoriesReducer
 };
 export default (history) =>combineReducers(Object.assign({router: connectRouter(history)},defaultReducers));

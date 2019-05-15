@@ -1,6 +1,7 @@
 import {all} from "redux-saga/effects";
+import BlogCategorySaga from "./General/BlogCategorySaga";
 
-const defaultSagas =[];
+const defaultSagas =[BlogCategorySaga()];
 
 /*concatenate here*/
 export default  function*  rootSaga(getState){
