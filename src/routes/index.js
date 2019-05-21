@@ -10,7 +10,7 @@ class Routes extends Component{
             <div>
                 <h1>{APP_NAME} SPA</h1>
                 <ul className="header">
-                    <li><NavLink to="/" >Home</NavLink></li>
+                    <li><NavLink exact to="/" >Home</NavLink></li>
                     <li><NavLink to="/stuff">Search</NavLink></li>
                     <li><NavLink to="/news">News</NavLink></li>
                     <li><NavLink to="/all-categories">All Categories</NavLink></li>
